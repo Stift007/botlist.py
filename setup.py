@@ -12,7 +12,7 @@ setup(
   name='botlistpy',
   version='0.0.1',
   description='An async wrapper around BotList.me\'s API',
-  long_description=open('README.md').read(),
+  long_description=open('README.txt').read(),
   url='',  
   author='DS_Stift007',
   author_email='dsstift@icloud.com',
