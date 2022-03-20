@@ -9,6 +9,13 @@ class BotlistAPIResponse:
         self.json = raw.json()
         self.success = self.status_code < 400
 
+class Asset:
+    def __init__(self,bytedata):
+        self.bytes = bytedata
+        
+    def save(self,file):
+        open(file,"wb").write(self.bytes)
+        
 class SyncBotlistAPIResponse:
     def __init__(self,raw=None) -> None:
         self.status_code = raw.status_code
