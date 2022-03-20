@@ -1,6 +1,9 @@
 class BotlistAPIResponse:
     def __init__(self,raw=None) -> None:
-        self.status_code = raw.status_code
+        if hasattr(raw,"status_code"):
+            self.status_code = raw.status_code
+        else:
+            self.status_code = raw.status
         self.content = raw.content
         self.res = raw
         self.json = raw.json()
