@@ -1,5 +1,5 @@
 class BotlistAPIResponse:
-    def __init__(self,raw=None) -> None:
+    async def __init__(self,raw=None) -> None:
         if hasattr(raw,"status_code"):
             self.status_code = raw.status_code
         else:
