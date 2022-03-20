@@ -11,7 +11,7 @@ class BotlistAPIResponse:
 
 class SyncBotlistAPIResponse:
     def __init__(self,raw=None) -> None:
-        self.status_code = raw.status
+        self.status_code = raw.status_code
         self.content = raw.content
         self.res = raw
         self.success = self.status_code < 400
