@@ -22,7 +22,7 @@ class BotClient:
                 "shard_count":shard_count,
                 "server_count":server_count
             })
-            return await BotlistAPIResponse(resp)
+            return BotlistAPIResponse(resp)
 
     async def _has_voted(self,userID):
         """Check if a User has Voted | **Do NOT use this Function, as it's complicated to use. Use .hasVoted() instead
@@ -40,8 +40,9 @@ class BotClient:
             resp = await cs.post(f"https://api.botlist.me/api/v1/bots/{self.client_id}/voted",headers=headers,params={
                 "userID":userID
             })
+            
 
-            return await BotlistAPIResponse(resp)
+            return BotlistAPIResponse(resp)
 
     async def hasVoted(self,user_id):
         """
